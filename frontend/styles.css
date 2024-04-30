@@ -27,10 +27,18 @@ main {
 }
 
 footer {
-    background-color: #333;
+    background-color: #4b4b55;
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px 20p;
     text-align: center;
+}
+
+#simulation-modules{
+    padding: 100px;
+}
+
+#simulation-modules .accordion-button{
+    background-color: #f4324a;
 }
 
 #teams-list {
