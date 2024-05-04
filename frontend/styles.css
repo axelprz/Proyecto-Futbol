@@ -41,32 +41,34 @@ footer {
     background-color: #f4324a;
 }
 
-#teams-list {
+/* Estilos para el contenedor de equipos */
+#equipos-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 20px;
-}
-
-.team-card {
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-}
-
-.team-card img {
-    max-width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Distribución de columnas responsiva */
+    gap: 20px; /* Espacio entre elementos */
+    justify-items: center; /* Centrar los elementos horizontalmente */
+  }
+  
+  /* Estilos para el cuadrado de cada equipo */
+  .equipo-card {
+    width: 100%; /* Ancho máximo del cuadrado */
+    max-width: 200px; /* Ancho máximo permitido */
+    border: 1px solid #ccc; /* Borde del cuadrado */
+    border-radius: 5px; /* Borde redondeado */
+    padding: 10px; /* Espacio interno */
+    text-align: center; /* Centrar el contenido horizontalmente */
+    margin: 10px;
+  }
+  
+  .equipo-escudo {
+    width: 100px;
     height: auto;
     margin-bottom: 10px;
-}
-
-.team-card h2 {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-}
-
-.team-card p {
+  }
+  
+  .equipo-nombre {
     font-size: 1rem;
-    line-height: 1.4;
-}
+    color: #333;
+  }
+  
 

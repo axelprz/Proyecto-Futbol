@@ -1,19 +1,27 @@
 const express = require('express');
 const { createPool } = require('mysql2/promise');
+const { config } = require('dotenv');
+const cors = require('cors');
+config();
 
 const app = express();
 const pool = createPool({
-    host: 'localhost',
-    user: 'root',
-    password: 'password_fuchibol',
-    port: 3306,
-    database: 'simulador_futbol'
+    host: process.env.MYSQL_DB_HOST,
+    user: process.env.MYSQL_DB_USER_ROOT,
+    password: process.env.MYSQL_DB_PASSWORD_ROOT,
+    port: process.env.MYSQL_DOCKER_PORT,
+    database: process.env.MYSQL_DB
 })
+
+app.use(cors({
+    origin: 'http://127.0.0.1:5500'
+  }));
 
 app.get("/equipos", async (req, res) => {
     const result = await pool.query('SELECT * FROM equipos');
     res.json(result[0]);
 });
 
-app.listen(3000);
-console.log('Server on port', 3000);
+
+app.listen(process.env.NODE_DOCKER_PORT);
+console.log('Server on port', process.env.NODE_DOCKER_PORT);
