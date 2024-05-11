@@ -1,28 +1,27 @@
-class Equipo {
+class Equipo{
   constructor(nombre, escudoUrl) {
     this.nombre = nombre;
     this.escudoUrl = escudoUrl;
   }
 
-  filtrarEquiposPorLiga(data, idPais, idCategoria) {
-    this.mostrarEquipos((data.filter(equipo => equipo.idPais === idPais && equipo.categoria === idCategoria)));
-  }
-
   mostrarEquipos(equipos) {
     const contenedorEquipos = document.getElementById('equipos-container');
-    equipos.forEach(equipo => {
+    equipos.forEach((equipo) => {
       const tarjeta = this.mostrarTarjeta(equipo);
       contenedorEquipos.appendChild(tarjeta);
     });
   }
 
   mostrarTarjeta(equipo) {
+    const boton = document.createElement('button');
+    boton.classList.add('boton-equipo');
+
     const tarjeta = document.createElement('div');
     tarjeta.classList.add('equipo-card');
 
     const escudo = document.createElement('img');
     escudo.src = equipo.imgEquipo;
-    escudo.alt = `Escudo de ${equipo.nombre}`;
+    escudo.alt = equipo.nombre;
     escudo.classList.add('equipo-escudo');
 
     const nombre = document.createElement('p');
@@ -31,8 +30,9 @@ class Equipo {
 
     tarjeta.appendChild(escudo);
     tarjeta.appendChild(nombre);
+    boton.appendChild(tarjeta);
 
-    return tarjeta;
+    return boton;
   }
 }
 

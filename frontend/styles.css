@@ -7,29 +7,83 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    color: #333;
+    margin: 0;
+    padding: 0;
+    text-shadow: 5px;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+.container {
+    width: 80%;
+    margin: 0 auto;
 }
+
+header{
+    color: #fff;
+    padding: 20px 0;
+    text-align: center; /* Para centrar el texto */
+    display: flex;
+    flex-direction: column; /* Apilar elementos verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+}
+
+header.index {
+    background-image: url(./img/header.jpg);
+}
+
+header.argentina{
+    background-color:  #044b7b ;
+}
+
+.header-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.header-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.container-header{
+    color: #fff;
+    padding: 20px 20px;
+    margin: 100px;
+}
+
+.header-section p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
 
 header h1 {
+    margin: 0;
     font-size: 2rem;
 }
 
+#verEquiposBtn, #simularLigaBtn, #simularPartidoBtn {
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#verEquiposBtn:hover, #simularLigaBtn:hover, #simularPartidoBtn:hover{
+    background-color: #45a049;
+}
+
 main {
-    padding: 20px;
+    padding: 20px 0;
 }
 
 footer {
-    background-color: #4b4b55;
+    background-color: #333;
     color: #fff;
-    padding: 10px 20p;
+    padding: 10px 0;
     text-align: center;
 }
 
@@ -42,22 +96,30 @@ footer {
 }
 
 /* Estilos para el contenedor de equipos */
-#equipos-container {
+#equipos-container, #equipos-seleccionados {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Distribución de columnas responsiva */
-    gap: 20px; /* Espacio entre elementos */
+    margin: 20px;
+    background-color: #fff;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Distribución de columnas responsiva */
+    gap: 10px; /* Espacio entre elementos */
     justify-items: center; /* Centrar los elementos horizontalmente */
+  }
+
+  #elegirEquipo{
+    margin-top: 20px;
+  }
+
+  .boton-equipo{
+    border: 0;
+    background: none;
   }
   
   /* Estilos para el cuadrado de cada equipo */
   .equipo-card {
     width: 100%; /* Ancho máximo del cuadrado */
     max-width: 200px; /* Ancho máximo permitido */
-    border: 1px solid #ccc; /* Borde del cuadrado */
-    border-radius: 5px; /* Borde redondeado */
     padding: 10px; /* Espacio interno */
     text-align: center; /* Centrar el contenido horizontalmente */
-    margin: 10px;
   }
   
   .equipo-escudo {
@@ -66,9 +128,46 @@ footer {
     margin-bottom: 10px;
   }
   
-  .equipo-nombre {
+  .equipo-nombre, #nombreEstadio{
     font-size: 1rem;
     color: #333;
+    margin: auto;
   }
+
+  #m1, #m2{
+    font-size: 5rem;
+    color: #333;
+  }
+
+  #imgEstadio{
+    margin-bottom: 10px;
+    width: 150px;
+    vertical-align: middle;
+  }
+
+  .ligas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .liga-item {
+    text-align: center;
+  }
+  
+  .liga-item a {
+    text-decoration: none;
+    color: inherit; /* Para mantener el color del texto por defecto */
+  }
+  
+  .liga-item img {
+    border-radius: 5px;
+  }
+  
+  .liga-item h3 {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  
   
 
