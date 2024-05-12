@@ -114,8 +114,39 @@
 
     <div id="equipos-container"></div>
 
+    <div id="vistaSimularLiga" style="display: none">
+      <div id="tablaPosiciones">
+        <div id="tablaPuntos">
+          <div class="tituloTabla">Posiciones Liga Profesional Argentina</div>
+          <table id="posiciones" class="table1">
+            <thead>
+              <tr style="background: #044b7b; color: white">
+                <th>#</th>
+                <th>Equipo</th>
+                <th class="pts">Pts</th>
+                <th class="pj">PJ</th>
+                <th class="pg">PG</th>
+                <th class="pe">PE</th>
+                <th class="pp">PP</th>
+                <th class="gf">GF</th>
+                <th class="gc">GC</th>
+                <th class="dg">DIF</th>
+              </tr>
+            </thead>
+            <tbody id="tBody"></tbody>
+          </table>
+          <div class="footerTabla">
+            <span class="cp1"
+              >-El campeón clasifica a la Copa Libertadores.</span
+            >
+          </div>
+        </div>
+      </div>
+      <div id="jornadas"></div>
+    </div>
     <script src="./LigaProfesionalArgentina.js" type="module"></script>
     <script src="../../script.js" type="module"></script>
-    <script src="../Equipo.js" type="module"></script>
+    <script src="../../Equipo.js" type="module"></script>
+    <script src="../../simulacion.js" type="module"></script>
   </body>
 </html>

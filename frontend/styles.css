@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Roboto,sans-serif,Arial,Helvetica;
     margin: 0;
     padding: 0;
     text-shadow: 5px;
@@ -168,6 +168,44 @@ footer {
     margin-top: 10px;
     font-size: 18px;
   }
-  
+
+#tablaPosiciones{
+  width: 40%;
+  float: left;
+  margin: 50px;
+}
+
+.tituloTabla{
+  text-align: center;
+  font-size: 1em;
+  background: #044b7b;
+  color: #fff;
+  border: 1px solid #000;
+  width: 100%;
+  text-shadow: 1px 1px 1px #000;
+}
+
+#posiciones{
+  font-size: .9em;
+  width: 380px;
+  text-align: center;
+  background: #797979;
+  width: 100%;
+}
+
+table{
+  display: table;
+  border-collapse: separate;
+  box-sizing: border-box;
+  text-indent: initial;
+  border-spacing: 2px;
+  border-color: gray;
+}
+
+thead{
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
   
 
