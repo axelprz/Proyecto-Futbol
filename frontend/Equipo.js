@@ -83,42 +83,6 @@ class Equipo{
   
     }
   }
-
-  llenarTablaEquipos(equipos){
-    const tabla = document.getElementById("tBody");
-    equipos.forEach(i, equipo =>{
-      const tr = document.createElement("tr");
-      if(i == 0){
-        tr.classList.add("punt");
-      }
-      else if(i % 2 == 0){
-        tr.classList.add("par");
-      }else{
-        tr.classList.add("impar");
-      }
-
-      for(x = 0; x < 7; x++){
-        const td = document.createElement("td");
-        if(x == 0){
-          td.classList.add("cp1");
-          td.textContent = i;
-          tr.appendChild(td);
-        }else if(x == 1){
-          const img = document.createElement("img");
-          img.src = equipo.imgEquipo;
-          img.alt = equipo.nombre;
-          img.textContent = equipo.nombre;
-
-          td.appendChild(img);
-          tr.appendChild(td);
-        }else{
-          td.textContent = 0;
-          tr.appendChild(td);
-        }
-      }
-      tabla.appendChild(tr);
-    })
-  }
 }
 
 export default Equipo;

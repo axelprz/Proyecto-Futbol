@@ -60,20 +60,21 @@ header h1 {
     font-size: 2rem;
 }
 
-#verEquiposBtn, #simularLigaBtn, #simularPartidoBtn {
+#verEquiposBtn, #simularLigaBtn, #simularPartidoBtn, #btnSiguienteFecha {
   margin-top: 30px;
   padding: 10px 20px;
   font-size: 16px;
   background-color: #4CAF50;
-  color: white;
+  color: black;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-#verEquiposBtn:hover, #simularLigaBtn:hover, #simularPartidoBtn:hover{
-    background-color: #45a049;
+#verEquiposBtn:hover, #simularLigaBtn:hover, #simularPartidoBtn:hover, #btnSiguienteFecha:hover{
+    background-color: #2c662f;
+    color: white;
 }
 
 main {
@@ -187,10 +188,10 @@ footer {
 
 #posiciones{
   font-size: .9em;
-  width: 380px;
-  text-align: center;
-  background: #797979;
   width: 100%;
+  text-align: center;
+  border: #044b7b 0,5px solid;
+  border-collapse: separate;
 }
 
 table{
@@ -199,7 +200,7 @@ table{
   box-sizing: border-box;
   text-indent: initial;
   border-spacing: 2px;
-  border-color: gray;
+  background: #044b7b;
 }
 
 thead{
@@ -207,5 +208,43 @@ thead{
   vertical-align: middle;
   border-color: inherit;
 }
-  
 
+tbody{
+  background: white;
+}
+
+.imgPosiciones{
+  width: 18px;
+}
+
+.cp1{
+  background: #4CAF50;
+}
+
+#jornadas{
+  width: 40%;
+  margin: 50px;
+  float: right;
+  font-size: .9em;
+}
+
+#fechaTitulo{
+  text-align: center;
+  font-size: 1em;
+  background: #044b7b;
+  color: #fff;
+  border: .5px solid #000;
+  width: 100%;
+  text-shadow: 1px 1px 1px #000;
+}
+
+#tablaPartidos{
+  font-size: .9em;
+  width: 100%;
+  text-align: center;
+  border-collapse: separate;
+}
+
+#btnSiguienteFecha{
+  margin: 10px 190px;
+}
