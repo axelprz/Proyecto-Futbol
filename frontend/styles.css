@@ -97,7 +97,7 @@ footer {
 }
 
 /* Estilos para el contenedor de equipos */
-#equipos-container, #equipos-seleccionados {
+#equipos-container, #equipos-seleccionados, #campeonLiga {
     display: grid;
     margin: 20px;
     background-color: #fff;
@@ -247,4 +247,8 @@ tbody{
 
 #btnSiguienteFecha{
   margin: 10px 190px;
+}
+
+.impar{
+  background-color: darkgray;
 }

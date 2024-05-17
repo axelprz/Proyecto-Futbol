@@ -7,6 +7,16 @@ function mostrarEquipos(idPais, categoria){
   obtenerEquipos()
     .then(data => {
       equipos = equipo.filtrarEquipos(data, idPais, categoria);
+      equipos.forEach(equipo =>{
+        equipo["pts"] = 0;
+        equipo["pj"] = 0;
+        equipo["pg"] = 0;
+        equipo["pe"] = 0;
+        equipo["pp"] = 0;
+        equipo["gf"] = 0;
+        equipo["gc"] = 0;
+        equipo["dif"] = 0;
+      })
       equipo.mostrarEquipos(equipos);
 
       let botones = Array.apply(null, document.querySelector("#equipos-container").querySelectorAll(".boton-equipo"));

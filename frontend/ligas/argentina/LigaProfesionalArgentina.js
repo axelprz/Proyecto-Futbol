@@ -1,5 +1,5 @@
 import {mostrarEquipos, equipos} from '../../script.js';
-import {simularPartido, simularLiga} from '../../simulacion.js';
+import {simularPartido, simularLiga} from '../../Simulacion.js';
 
 let idPais = 1;
 let categoria = 1;
